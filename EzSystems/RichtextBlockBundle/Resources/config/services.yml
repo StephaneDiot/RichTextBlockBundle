@@ -1,0 +1,17 @@
+parameters:
+  ez_systems_richtext_block.twig.extension.rich_text.class: EzSystems\RichtextBlockBundle\Twig\RichTextExtension
+
+services:
+  ez_systems_richtext_block.twig.extension.rich_text:
+    class: "%ez_systems_richtext_block.twig.extension.rich_text.class%"
+    arguments:
+        - "@ezpublish.fieldType.ezrichtext.converter.output.xhtml5"
+        - "@ezpublish.fieldType.ezrichtext.converter.edit.xhtml5"
+        - "@ezpublish.fieldType.ezrichtext"
+    tags:
+        - { name: twig.extension }
+  studiocustom.block.richtext:
+      class: EzSystems\RichtextBlockBundle\Model\RichText
+      arguments:
+      tags:
+        - { name: landing_page_field_type.block_type, alias: richtext }

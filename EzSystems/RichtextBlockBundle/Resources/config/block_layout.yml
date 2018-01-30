@@ -1,0 +1,6 @@
+blocks:
+  richtext:
+    views:
+      html:
+        template: EzSystemsRichtextBlockBundle:blocks:richtext.html.twig
+        name: RichText

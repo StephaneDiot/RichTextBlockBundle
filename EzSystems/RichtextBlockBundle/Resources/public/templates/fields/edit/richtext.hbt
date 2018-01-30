@@ -1,0 +1,12 @@
+<label class="ezs-field__label" for="{{ id }}">{{ name }}</label>
+<div class="ezs-field__wrapper">
+    <div class="ez-validated-input ez-richtext-editor {{ editableClass }}"
+         contenteditable="false"
+         data-input-validation data-input
+         id="{{ id }}" name="{{ id }}"
+         {{#if disabled}}disabled{{/if}}
+    >
+        {{{ xhtml }}}
+    </div>
+</div>
+<div class="ezs-field__error"></div>

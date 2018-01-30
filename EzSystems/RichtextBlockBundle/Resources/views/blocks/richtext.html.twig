@@ -1,0 +1,8 @@
+
+<div class="landing-page__block block_one_column">
+    <article class="box-100 rich-text-block">
+        {% if attributes.richtext is defined %}
+            {{ attributes.richtext | bloc_richtext_to_html5 }}
+        {% endif %}
+    </article>
+</div>
